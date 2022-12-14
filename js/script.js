@@ -84,7 +84,10 @@ const next = document.querySelector('.next');
 
 next.addEventListener('click', goToNextSlides);
 
+
 // freccia verso sx
+
+// prev.addEventListener('click', goToPrevSlides);
 
 prev.addEventListener('click', function(){
     if(itemActive > 0){
@@ -113,9 +116,9 @@ prev.addEventListener('click', function(){
         //stessa cosa per i cerchi
         circles[itemActive].classList.add('active');
         // stessa cosa per i thumbanails
-        thumbnails[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
     }
-})
+ })
 
 
 
@@ -159,12 +162,55 @@ function goToNextSlides(){
 
 let myInterval = setInterval(goToNextSlides, 2000);
 
-
 document.getElementById('play').addEventListener('click', function(){
-    clearInterval(myInterval);
+    // clearInterval(myInterval);
     myInterval = setInterval(goToNextSlides, 2000);
 });
 
 document.getElementById('pause').addEventListener('click', function(){
     clearInterval(myInterval);
 })
+
+
+// BONUS bottone prev
+
+// function goToPrevSlides(){
+//     if(itemActive > 0){
+//         //verifico l'elemento attivo (itemActive)
+//         items[itemActive].classList.remove('active');
+//         circles[itemActive].classList.remove('active');
+//         thumbnails[itemActive].classList.remove('active');
+//         //decremento il suo valore di 1
+//         itemActive--;
+//         //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+//         items[itemActive].classList.add('active');
+//         //stessa cosa per i cerchi
+//         circles[itemActive].classList.add('active');
+//         // stessa cosa per i thumbanails
+//         thumbnails[itemActive].classList.add('active');
+//     }
+//     else{
+//         //verifico l'elemento attivo (itemActive)
+//         items[itemActive].classList.remove('active');
+//         circles[itemActive].classList.remove('active');
+//         thumbnails[itemActive].classList.remove('active');
+//         //decremento il suo valore di 1
+//         itemActive=imagesArray.length -1;
+//         //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+//         items[itemActive].classList.add('active');
+//         //stessa cosa per i cerchi
+//         circles[itemActive].classList.add('active');
+//         // stessa cosa per i thumbanails
+//         thumbnails[itemActive].classList.add('active');
+//     }
+    
+    
+// }
+
+
+// let myIntervalPrev = setInterval(goToPrevSlides, 2000);
+
+// document.getElementById('prev').addEventListener('click', function(){
+//     clearInterval(myIntervalPrev);
+//     myIntervalPrev = setInterval(goToPrevSlides, 2000);
+// });
