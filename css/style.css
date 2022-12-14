@@ -139,12 +139,20 @@ p{
     color: white;
 }
 
+.circle-button#prev{
+    background-color: red;
+}
+
 .circle-button#play{
     background-color: green;
 }
 
 .circle-button#pause{
     background-color: orange;
+}
+
+.circle-button#prev:hover{
+    background-color: darkred;
 }
 
 .circle-button#play:hover{
