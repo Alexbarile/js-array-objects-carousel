@@ -144,7 +144,7 @@ function goToNextSlides(){
         //verifico l'elemento attivo (itemActive)
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
-        thumbnails[itemActive].classList.remove('active)');
+        thumbnails[itemActive].classList.remove('active');
         //incremento il suo valore di 1
         itemActive=0
         //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
@@ -154,13 +154,16 @@ function goToNextSlides(){
         // stessa cosa per i thumbanails
         thumbnails[itemActive].classList.add('active');
     }
+    
 }
 
 let myInterval = setInterval(goToNextSlides, 2000);
 
+
 document.getElementById('play').addEventListener('click', function(){
+    clearInterval(myInterval);
     myInterval = setInterval(goToNextSlides, 2000);
-},{once: "true"});
+});
 
 document.getElementById('pause').addEventListener('click', function(){
     clearInterval(myInterval);
