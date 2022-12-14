@@ -1,11 +1,34 @@
-//Creo array immagini
-const imagesArray = [
-    "01.webp",
-    "02.webp",
-    "03.webp",
-    "04.webp",
-    "05.webp"
+//Creo array oggetti
+
+let imagesArray = [
+    {
+        images: "01.webp",
+        title: "Spiderman",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+    {
+        images: "02.webp",
+        title: "Ratchet & Clank",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+    {
+        images: "03.webp",
+        title: "Fortnite",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+    {
+        images: "04.webp",
+        title: "Cat",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+    {
+        images: "05.webp",
+        title: "The Avengers",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    },
+
 ]
+
 
 //Creiamo dinamicamente i div con le immagini del carosello
 let itemsContent = '';
@@ -13,10 +36,14 @@ let itemsThumbnails = '';
 
 for(let i = 0; i < imagesArray.length; i++){
     itemsContent += `<div class="item">
-        <img src="./img/${imagesArray[i]}">
-    </div>`
+                        <img src="./img/${imagesArray[i].images}">
+                        <div class="item-description">
+                             <h3>${imagesArray[i].title}</h3>
+                             <p>${imagesArray[i].description}</p>
+                        </div>
+                    </div>`
 
-    itemsThumbnails += `<div class="thumb"><img src="./img/${imagesArray[i]}"></div>`;
+    itemsThumbnails += `<div class="thumb"><img src="./img/${imagesArray[i].images}"></div>`;
 }
 
 //inseriamo le immagini nel div che le deve contenere

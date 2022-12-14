@@ -22,7 +22,7 @@
     float: right;
     flex-direction: column;
     height: 100%;
-    transform: translate(50%, -110%);
+    transform: translate(50%, -121%);
     background-color: black;
 }
 
@@ -44,6 +44,23 @@
 
 .item{
     display: none;
+    position: relative;
+}
+
+h3{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom: 25px;
+    right: 150px;
 }
 
 .item-slider, .item, img{
