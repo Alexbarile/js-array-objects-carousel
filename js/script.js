@@ -163,7 +163,7 @@ function goToNextSlides(){
 let myInterval = setInterval(goToNextSlides, 2000);
 
 document.getElementById('play').addEventListener('click', function(){
-    // clearInterval(myInterval);
+    clearInterval(myInterval);
     myInterval = setInterval(goToNextSlides, 2000);
 });
 
