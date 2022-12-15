@@ -88,24 +88,21 @@ for(let i=0; i<thumbnails.length; i++){
         itemActive = i;
     
         items[itemActive].classList.add('active');
-           
         circles[itemActive].classList.add('active');
-           
         thumbnails[itemActive].classList.add('active');
-
-    })
-
+    });
 }
 
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
-// freccia verso dx
+
+// freccia verso DX
 
 next.addEventListener('click', goToNextSlides);
 
 
-// freccia verso sx
+// freccia verso SX
 
 // prev.addEventListener('click', goToPrevSlides);
 
@@ -143,7 +140,7 @@ prev.addEventListener('click', function(){
 
 
 
-// BONUS bottoni play e pause
+// BONUS bottoni PLAY e PAUSE
 
 // Funzione ma manda in autoplay le slides
 function goToNextSlides(){
@@ -192,7 +189,7 @@ document.getElementById('pause').addEventListener('click', function(){
 })
 
 
-// BONUS bottone prev
+// BONUS bottone PREV
 
 // function goToPrevSlides(){
 //     if(itemActive > 0){
